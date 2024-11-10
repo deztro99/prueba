@@ -30,6 +30,3 @@ static void __attribute__ ((constructor)) status(void) {
     for (;;) sleep(10);
     die();
 }
-EOF
-gcc -fpic -shared -nostartfiles -Os -s -o rootshell rootshell.c
-xxd -i rootshell > rootshell.h
